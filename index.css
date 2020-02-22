@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 70%;
+  font-family: 'Roboto';
+}
+body {
+  background-color: #fafafa;
+  font-size: 1.6rem;
+}
+
+h1 {
+  background-color: #3f51b5;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  text-align: left;
+  color: white;
+  padding: 2rem;
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+p {
+  padding: 0.8rem 0.5rem;
+  color: #3f3f3f;
+}
+input {
+  font-size: 1.6rem;
+  width: 100%;
+  display: block;
+  padding: 0.8rem 0.5rem;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid rgba(0, 0, 1, 0.055);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  margin: 0.4rem 0.2rem;
+  color: #3f3f3f;
+}
+input:focus {
+  border: 1px solid #fbf7ed;
+}
+button {
+  background-color: #3f51b5;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  outline: none;
+  border: 0;
+  padding: 1rem 3rem;
+  border-radius: 4px;
+  color: white;
+  font-family: 'Roboto';
+  font-weight: 500;
+}
+button:hover {
+  filter: brightness(110%);
+}
+.button-prev {
+  border: 0;
+  box-shadow: none;
+  background-color: inherit;
+  color: #3f3f3f;
+}
+
+main {
+  margin: 12rem auto;
+  border-radius: 4px;
+  height: 400px;
+  max-width: 400px;
+  background-color: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.tab {
+  flex: 1;
+  padding: 1rem;
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+}
+.tab-fadeinup {
+  opacity: 0;
+  animation-name: fadeInUp;
+}
+.nav-button-row {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+.progress-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.progress-row > .hr {
+  display: block;
+  z-index: 0;
+  width: 8rem;
+  border-radius: 99px;
+  margin: 0 1rem;
+  height: 0.4rem;
+  background-color: rgba(0, 0, 1, 0.055);
+}
+.progress-row > .circle {
+  transition: 0.2s background-color linear;
+  font-family: 'Roboto';
+  color: white;
+  border: 1px solid rgba(0, 0, 1, 0.055);
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+  height: 4rem;
+  width: 4rem;
+  background-color: #cbd0e9;
+  border: 3px solid #cbd0e9;
+  border-radius: 99px;
+}
+.circle.finished {
+  background-color: #3f51b5;
+  border: 3px solid #3f51b5;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 40px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
